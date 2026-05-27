@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand-primary: #4F46E5; /* Indigo 600 */
+  --color-brand-secondary: #0F172A; /* Slate 900 */
+  --color-brand-bg: #F1F5F9; /* Slate 100/50 mix */
+}
+
+@layer base {
+  body {
+    @apply font-sans text-slate-800 bg-[#F1F5F9] antialiased;
+  }
+}
+
+@layer components {
+  .card-dense {
+    @apply bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden;
+  }
+  
+  .btn-primary-dense {
+    @apply bg-indigo-600 text-white px-4 py-2 rounded-md text-sm font-semibold hover:bg-indigo-700 transition-all active:scale-95 flex items-center justify-center gap-2;
+  }
+  
+  .btn-secondary-dense {
+    @apply bg-slate-50 text-slate-700 border border-slate-200 px-4 py-2 rounded-md text-sm font-semibold hover:bg-slate-100 transition-all;
+  }
+  
+  .table-header-dense {
+    @apply bg-slate-50 border-b border-slate-200 text-[10px] font-bold text-slate-500 uppercase tracking-widest;
+  }
+}
+
+/* Custom Dotted Border Utility */
+.bg-dashed-border-simulation {
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
