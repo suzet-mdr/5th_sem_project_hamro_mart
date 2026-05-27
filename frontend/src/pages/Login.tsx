@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useAuth } from "../App";
 import { Store, Lock, Mail, ArrowRight, Loader2 } from "lucide-react";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 
 export default function Login() {
   const { login } = useAuth();
