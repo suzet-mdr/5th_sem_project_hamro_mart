@@ -10,6 +10,7 @@ import Customers from './pages/Customers';
 import Users from './pages/Users';
 import Layout from './components/Layout';
 
+
 interface AuthContextType {
   user: User | null;
   token: string | null;
