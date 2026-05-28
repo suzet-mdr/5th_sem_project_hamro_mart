@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Product, Customer } from "../types";
 import { cn, formatCurrency } from "../lib/utils";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function POS() {
   const { token, user } = useAuth();
@@ -218,7 +218,7 @@ export default function POS() {
       </div>
 
       {/* Right: Cart & Checkout */}
-      <div className="w-full lg:w-[380px] flex flex-col gap-6">
+      <div className="w-full  lg:w-[380px]shrink-0 flex flex-col gap-6">
         {/* Customer Selection */}
         <div className="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
           <div className="flex items-center justify-between mb-4">

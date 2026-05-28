@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useAuth } from "../App";
 import { UserPlus, Shield, Mail, Trash2, Edit2, X, ShieldCheck, UserCog, MoreVertical } from "lucide-react";
 import { UserRole, User as UserType } from "../types";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "../lib/utils";
 
 export default function Users() {

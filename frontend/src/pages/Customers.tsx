@@ -3,7 +3,7 @@ import { useAuth } from "../App";
 import { Search, UserPlus, Phone, Star, History, MoreVertical, X, Loader2, User } from "lucide-react";
 import { Customer } from "../types";
 import { formatCurrency } from "../lib/utils";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Customers() {
   const { token } = useAuth();

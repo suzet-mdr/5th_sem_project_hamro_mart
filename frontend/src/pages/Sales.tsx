@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Sale, SaleItem } from "../types";
 import { cn, formatCurrency } from "../lib/utils";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Sales() {
   const { token, user } = useAuth();
@@ -164,7 +164,9 @@ export default function Sales() {
                     </td>
                   )}
                   <td className="px-5 py-2.5">
-                    <p className="font-bold text-slate-600 uppercase tracking-tighter">{s.staff_name.split(' ')[0]}</p>
+                   <p className="font-bold text-slate-600 uppercase tracking-tighter">
+  {s.staff_name?.split(" ")[0] || "SYSTEM"}
+</p>
                   </td>
                   <td className="px-5 py-2.5">
                     <div className="flex items-center gap-1.5 italic">
@@ -237,7 +239,9 @@ export default function Sales() {
                                   {item.quantity}x
                                 </div>
                                 <div>
-                                  <p className="text-xs font-black text-slate-800 uppercase tracking-tight truncate max-w-[180px]">{item.product_name}</p>
+                                 <p className="text-xs font-black text-slate-800 uppercase tracking-tight truncate w-40" title={item.product_name}>
+  {item.product_name}
+</p>
                                   <p className="text-[9px] text-slate-500 font-semibold italic">Base Value: {formatCurrency(item.selling_price)}</p>
                                 </div>
                              </div>
