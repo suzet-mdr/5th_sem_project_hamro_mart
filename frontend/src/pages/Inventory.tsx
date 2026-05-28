@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import { Product, Category } from "../types";
 import { cn, formatCurrency } from "../lib/utils";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Inventory() {
   const { token, user } = useAuth();
